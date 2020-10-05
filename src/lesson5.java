@@ -8,8 +8,6 @@ public class lesson5 {
 //        *
         System.out.println("Diamond:");
         for (int i = 0; i < 10; i++) {
-//          10 = spaces + asterisks
-//          9 - i = spaces
             for (int j = 9 - i; j > 0; j--) {
                 System.out.print(" ");
             }
@@ -25,8 +23,6 @@ public class lesson5 {
             System.out.println();
         }
         for (int i = 8; i >= 0; i--) {
-//          10 = spaces + asterisks
-//          9 - i = spaces
             for (int j = 9 - i; j > 0; j--) {
                 System.out.print(" ");
             }
