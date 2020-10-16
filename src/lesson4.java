@@ -19,6 +19,12 @@ public class lesson4 {
             }
         }
 
+        for (int[] ints : twoDInit) {
+            for (int anInt : ints) {
+                System.out.println(anInt);
+            }
+        }
+
         for (int i = 0; i < 5; i++) {
             for (int j = 0; j < 7; j++) {
                 System.out.print("*");

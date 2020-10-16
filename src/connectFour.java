@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class connectFour {
     public static void main (String[] args) {
 //         | |
@@ -44,8 +46,42 @@ public class connectFour {
                 {" ", " ", " ", " ", " ", " ", " "},
                 {" ", " ", " ", " ", " ", " ", " "}
         };
+        Scanner scan = new Scanner(System.in);
 
-        printBoard(board);
+        int col;
+        int row;
+        String currentPlayer = "X";
+
+
+        while (true) {
+            System.out.println("Player " + currentPlayer + "'s turn!");
+            printBoard(board);
+
+            col = scan.nextInt();
+            row = getRow(board, col);
+            board[row][col] = currentPlayer;
+
+            if (checkWin(board, row, col, currentPlayer)) {
+                break;
+            }
+
+            if (currentPlayer == "X") {
+                currentPlayer = "O";
+            } else {
+                currentPlayer = "X";
+            }
+        }
+
+        System.out.println("Good Game!");
+    }
+
+    private static int getRow (String[][] board, int col) {
+        for (int row = board.length-1; row >= 0; row--) {
+            if (board[row][col] == " ") {
+                return row;
+            }
+        }
+        return 0;
     }
 
     private static void printBoard (String[][] board) {
@@ -58,5 +94,24 @@ public class connectFour {
                     + board[i][3] + "|" + board[i][4] + "|" + board[i][5] + "|" + board[i][6] + "|");
         }
         System.out.println("+-------------+");
+    }
+
+    private static boolean checkWin(String[][] board, int row, int col, String currentPlayer) {
+//      Check row victory
+        int counter = 0;
+
+        for (int loop_col = 0; loop_col < board[row].length; loop_col++) {
+            if (board[row][loop_col] == currentPlayer) {
+                counter++;
+            } else {
+                counter = 0;
+            }
+
+            if (counter >= 4) {
+                return true;
+            }
+        }
+
+        return false;
     }
 }

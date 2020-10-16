@@ -26,9 +26,12 @@ public class lesson3 {
 
         System.out.println("\n\n================\n");
 
-//      Loops:
+//      Arrays
         int[] classShoeSizes = {10, 11, 6, 14};
 
+        int[] test = new int[4];
+
+//      Loops:
 //      for each loop
 //        don't know what index im currently at, so can't change values within array
         for (int shoeSize : classShoeSizes) {

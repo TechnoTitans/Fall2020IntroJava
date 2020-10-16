@@ -48,7 +48,6 @@ public class lesson6 {
 
         int y = 5;
         demo(y);
-        System.out.println(y);
 
         String a = "chicken";
         demoStr(a, 25);
@@ -62,7 +61,7 @@ public class lesson6 {
 
     static void demo (int x) {
         x++;
-        System.out.println(x);
+        System.out.println("In demo" + x);
     }
 
 //  Void method (Doesn't return anything)
