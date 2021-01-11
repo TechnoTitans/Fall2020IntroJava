@@ -48,6 +48,7 @@ public class lesson6 {
 
         int y = 5;
         demo(y);
+        System.out.println(y);
 
         String a = "chicken";
         demoStr(a, 25);

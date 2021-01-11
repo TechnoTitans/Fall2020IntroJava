@@ -61,7 +61,7 @@ public class lesson1 {
 //      Other data types (objects):
 //        - Strings: text basically
 
-        boolean age = true;
+        int age = 13;
 
 //      These are the same thing:
         String name = "Berkan";
