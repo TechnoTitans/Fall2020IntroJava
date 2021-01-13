@@ -1,32 +1,46 @@
 public class Cat {
-    String name;
-    String furColor;
-    double heightInCm;
-    double lengthInCm;
+//  private visibility modifier means that only variables/methods in this class can access variables/methods
+    private String name;
+    private String furColor;
+    private double heightInCm;
+    private double lengthInCm;
 
-    Cat(String name, String furColor, double heightInCm, double lengthInCm) {
+//  The constructor: assigns values to instance variables for a specific instance
+//    and run any code that should be run for all instances
+    public Cat(String name, String furColor, double heightInCm, double lengthInCm) {
         this.name = name;
         this.furColor = furColor;
         this.heightInCm = heightInCm;
         this.lengthInCm = lengthInCm;
     }
 
-    void sleep() {
-        System.out.println(name + " is sleeping...zzz....");
+    public void sleep() {
+        System.out.println(this.name + " is sleeping...zzz....");
     }
 
-    void meow() {
-        System.out.println("MEOW! I am " + furColor);
+    public void meow() {
+        System.out.println("MEOW! I am " + this.furColor);
     }
 
-    void scratching(String obj) {
-        System.out.println(name + " is scratching a " + obj);
+    public void scratching(String obj) {
+        System.out.println(this.name + " is scratching a " + obj);
     }
 
-    boolean jumpToHeight(double desiredJumpHeight) {
-        if (heightInCm + lengthInCm > desiredJumpHeight) {
+    public boolean jumpToHeight(double desiredJumpHeight) {
+        if (this.heightInCm + this.lengthInCm > desiredJumpHeight) {
             return true;
         }
         return false;
+    }
+
+    public void setName(String name){
+//      In this case this. is needed
+        this.name = name;
+    }
+
+    public String getName(){
+//      this. refers to instance variable of current instance
+//      In this case, leaving out the this. also works
+        return this.name;
     }
 }
