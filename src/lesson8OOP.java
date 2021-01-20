@@ -16,8 +16,16 @@ public class lesson8OOP {
         Cat cat2 = new Cat("Michelle", "Violet", 150, 5.98);
 
         System.out.println(cat2.jumpToHeight(100));
+
+        System.out.println("============================================");
+
+        Leopard leo = new Leopard(80, 23.1, "Leo", "Orange", 50, 100);
+
+        System.out.println(leo.climbLargeTree(49));
+        leo.sleep();
     }
 }
+
 //  Task 1:
 //  Model a Robot
 //    - Instance variables: name, and a few other ones
@@ -31,3 +39,14 @@ public class lesson8OOP {
 //       - Also create getters and setters for each instance variable
 //       - use a for loop in one of your methods for something
 //  From your main method, create a 2 Boat instances and have them do things
+
+//Task 3:
+//Model a Boat
+//- Instance variables: name, and a few other ones
+//- Methods: a few methods such as actions the boat can perform
+//   - Also create getters and setters for each instance variable
+//   - use a for loop in one of your methods for something
+//From your main method, create a 2 Boat instances and have them do things
+//Also, create a Jet-ski class, and a cruise ship class
+//- Add any additional instance variables/methods that those specific object would have
+//- Use a loop somewhere for both

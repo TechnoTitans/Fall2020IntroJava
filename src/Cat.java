@@ -43,4 +43,8 @@ public class Cat {
 //      In this case, leaving out the this. also works
         return this.name;
     }
+
+    public double getLengthInCm(){
+        return this.lengthInCm;
+    }
 }
